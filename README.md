@@ -1,5 +1,7 @@
 Cards app.
 
+Backend
+
 Installation
 
 1. git clone https://github.com/a-dubrovin/cards_app.git
@@ -46,13 +48,7 @@ curl --location --request GET 'http://127.0.0.1:8000/api/v1/cards/' \
 4. Get series info
 
 curl --location --request GET 'http://127.0.0.1:8000/api/v1/series/<series_number>' \
---header 'Authorization: Token <user_token>' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "series": "04",
-    "cards_quantity": "5",
-    "validity": "6"
-}'
+--header 'Authorization: Token <user_token>'
 
 5. Create new cards
 
@@ -64,3 +60,21 @@ curl --location --request POST 'http://127.0.0.1:8000/api/v1/cards/' \
     "cards_quantity": "<int>",
     "validity": "<int>"
 }'
+
+
+Frontend
+
+Installation
+
+ 1. cd ./frontend/
+ 2. npm install
+
+Run
+
+ 1. cd ./frontend/
+ 2. npm run serve
+
+Build
+
+ 1. cd ./frontend/
+ 2. npm run build
