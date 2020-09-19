@@ -78,6 +78,7 @@ class CardNumber(models.Model):
 
     class Meta:
         unique_together = ('series', 'number')
+        ordering = ('series', 'number')
 
     @property
     def is_active(self):
